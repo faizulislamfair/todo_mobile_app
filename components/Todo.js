@@ -1,16 +1,19 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function Todo() {
+export default function Todo(props) {
+
+    const { text, id, handleDeleteTodo } = props;
+
     return (
         <View style={styles.todo}>
             <View style={styles.todoNumber}>
                 <View style={styles.order}>
-                    <Text style={styles.textColor}>#1</Text>
+                    <Text style={styles.textColor}>{id}</Text>
                 </View>
-                <Text>Task One</Text>
+                <Text style={styles.mainText}>{text}</Text>
             </View>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => handleDeleteTodo(id)}>
                 <Text style={styles.btnText}>Remove</Text>
             </TouchableOpacity>
         </View>
@@ -46,6 +49,9 @@ const styles = StyleSheet.create({
     },
     textColor: {
         color: '#ffffff'
+    },
+    mainText: {
+        maxWidth: '80%'
     },
     btn: {
         backgroundColor: '#ff7675',
