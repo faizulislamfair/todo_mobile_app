@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "react-native-todo",
+    "name": "Ataraxia Todo",
     "slug": "react-native-todo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.faizul_islam_fair.reactnativetodo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cc3c27c7-d535-46a1-80a6-247f6330aad7"
+      }
     }
   }
 }
